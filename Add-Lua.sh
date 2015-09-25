@@ -1,13 +1,16 @@
 #!/bin/bash
 
+set -x
+
 #  Created by Alex Karahalios on 6/12/11
-#  Edited by Brian Reinhart on 08/02/2012 .
-#  Last edited 8/02/2012
+#  Edited by Brian Reinhart on 08/02/2012
+#  Edited by Masatoshi Teruya on 09/26/2015 .
+#  Last edited 09/26/2015
 #
 # Updates Xcode and to support LUA language for editing
 #
 
-# Path were this script is located
+# Path where this script is located
 #
 SCRIPT_PATH="$(dirname "$BASH_SOURCE")"
 
@@ -23,7 +26,7 @@ PLISTBUDDY=/usr/libexec/PlistBuddy
 # This framework is found withing the Xcode.app package and is used when Xcode is a monolithic
 # install (all contained in Xcode.app)
 #
-DVTFOUNDATION_PATH="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/"
+DVTFOUNDATION_PATH="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Resources/"
 
 # Create Plist file of additional languages to add to 'DVTFoundation.xcplugindata'
 #
@@ -40,7 +43,7 @@ cat >AdditionalLanguages.plist <<EOF
 		<array>
 			<dict>
 				<key>identifier</key>
-				<string>com.apple.xcode.lua-source</string>
+				<string>org.lua.lua-source</string>
 			</dict>
 		</array>
 		<key>id</key>
@@ -55,11 +58,11 @@ cat >AdditionalLanguages.plist <<EOF
 		<array>
 			<dict>
 				<key>identifier</key>
-				<string>Xcode.SourceCodeLanguage.Generic</string>
+				<string>public.source-code</string>
 			</dict>
 		</array>
 		<key>name</key>
-		<string>Lua Language</string>
+		<string>Lua</string>
 	</dict>
 </dict>
 </plist>
@@ -78,5 +81,10 @@ rm -f AdditionalLanguages.plist
 cp "$SCRIPT_PATH/Lua.xclangspec" "$DVTFOUNDATION_PATH"
 
 # Remove any cached Xcode plugins
-#
-rm -f /private/var/folders/*/*/*/com.apple.DeveloperTools/*/Xcode/PlugInCache.xcplugincache
+# Xcode 6 
+rm -rf /private/var/folders/*/*/*/com.apple.DeveloperTools/*/Xcode/PlugInCache-Debug.xcplugincache
+# Xcode 4+5
+rm -rf /private/var/folders/*/*/*/com.apple.DeveloperTools/*/Xcode/PlugInCache.xcplugincache
+
+
+
