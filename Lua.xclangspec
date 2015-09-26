@@ -157,6 +157,7 @@
 				"require",
 				"return",
 				"select",
+				"self",
 				"setfenv",
 				"setmetatable",
 				"string",
