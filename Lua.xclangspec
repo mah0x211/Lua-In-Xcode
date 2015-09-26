@@ -531,7 +531,7 @@
 		Identifier = "xcode.lang.lua.comment";
 		Syntax = {
 			Start = "--[[";
-			End = "--]]";
+			End = "]]";
 			Foldable = YES;
 			IncludeRules = (
 				"xcode.lang.url",
