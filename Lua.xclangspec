@@ -221,6 +221,7 @@
 			IncludeRules = (
 				"xcode.lang.lua.function",
 				"xcode.lang.lua.block.if",
+				"xcode.lang.lua.block.do",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
@@ -339,8 +340,8 @@
 			Recursive = YES;
 			IncludeRules = (
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
@@ -389,10 +390,9 @@
 			End = "end";
 			Foldable = YES;
 			Recursive = YES;
-			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
@@ -410,7 +410,6 @@
 			IncludeRules = (
 				"xcode.lang.lua.block.if",
 				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.do",
 				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
