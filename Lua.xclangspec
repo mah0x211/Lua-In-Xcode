@@ -220,9 +220,7 @@
 			Tokenizer = "xcode.lang.lua.lexer.toplevel";
 			IncludeRules = (
 				"xcode.lang.lua.function",
-				"xcode.lang.lua.block",
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.bracketexpr",
@@ -340,9 +338,7 @@
 			Foldable = YES;
 			Recursive = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block",
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
@@ -386,25 +382,6 @@
 		};
 	},
 	{
-		Identifier = "xcode.lang.lua.block";
-		Syntax = {
-			Tokenizer = "xcode.lang.lua.lexer";
-			Start = "{";
-			End = "}";
-			Foldable = YES;
-			Recursive = YES;
-			IncludeRules = (
-				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
-				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
-				"xcode.lang.lua.block.do",
-				"xcode.lang.lua.bracketexpr",
-				"xcode.lang.lua.parenexpr",
-			);
-		};
-	},
-	{
 		Identifier = "xcode.lang.lua.block.if";
 		Syntax = {
 			Tokenizer = "xcode.lang.lua.lexer";
@@ -414,8 +391,6 @@
 			Recursive = YES;
 			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block",
-				"xcode.lang.lua.block.while",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
@@ -432,29 +407,7 @@
 			End = "end";
 			Foldable = YES;
 			Recursive = YES;
-			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block",
-				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
-				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
-				"xcode.lang.lua.bracketexpr",
-				"xcode.lang.lua.parenexpr",
-			);
-		};
-	},
-	{
-		Identifier = "xcode.lang.lua.block.while";
-		Syntax = {
-			Tokenizer = "xcode.lang.lua.lexer";
-			Start = "while";
-			End = "end";
-			Foldable = YES;
-			Recursive = YES;
-			StartAtBOL = YES;
-			IncludeRules = (
-				"xcode.lang.lua.block",
 				"xcode.lang.lua.block.if",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.block.for",
@@ -474,9 +427,7 @@
 			Recursive = YES;
 			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block",
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
 				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
 				"xcode.lang.lua.bracketexpr",
@@ -494,9 +445,7 @@
 			Recursive = YES;
 			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block",
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.while",
 				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
