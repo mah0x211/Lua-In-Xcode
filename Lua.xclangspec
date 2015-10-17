@@ -355,7 +355,8 @@
 			Tokenizer = "xcode.lang.lua.lexer";
 			Rules = (
 				"function",
-				"xcode.lang.lua.function.name",
+				"xcode.lang.lua.function.name?",
+				"xcode.lang.lua.parenexpr",
 			);
 		};
 	},
