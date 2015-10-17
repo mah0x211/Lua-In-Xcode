@@ -222,7 +222,7 @@
 				"xcode.lang.lua.function",
 				"xcode.lang.lua.block.if",
 				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
@@ -340,8 +340,8 @@
 			IncludeRules = (
 				"xcode.lang.lua.block.if",
 				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
@@ -392,8 +392,8 @@
 			StartAtBOL = YES;
 			IncludeRules = (
 				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
@@ -410,8 +410,8 @@
 			IncludeRules = (
 				"xcode.lang.lua.block.if",
 				"xcode.lang.lua.block.repeat",
-				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
@@ -428,25 +428,22 @@
 			StartAtBOL = YES;
 			IncludeRules = (
 				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.for",
 				"xcode.lang.lua.block.do",
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
 		};
 	},
 	{
-		Identifier = "xcode.lang.lua.block.for";
+		Identifier = "xcode.lang.lua.braceexpr";
 		Syntax = {
 			Tokenizer = "xcode.lang.lua.lexer";
-			Start = "for";
-			End = "end";
+			Start = "{";
+			End = "}";
 			Foldable = YES;
 			Recursive = YES;
-			StartAtBOL = YES;
 			IncludeRules = (
-				"xcode.lang.lua.block.if",
-				"xcode.lang.lua.block.repeat",
 				"xcode.lang.lua.bracketexpr",
 				"xcode.lang.lua.parenexpr",
 			);
@@ -460,6 +457,7 @@
 			End = ")";
 			Recursive = YES;
 			IncludeRules = (
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.bracketexpr",
 			);
 		};
@@ -472,6 +470,7 @@
 			End = "]";
 			Recursive = YES;
 			IncludeRules = (
+				"xcode.lang.lua.braceexpr",
 				"xcode.lang.lua.parenexpr",
 			);
 		};
